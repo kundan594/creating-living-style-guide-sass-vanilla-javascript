@@ -7,7 +7,7 @@ Adopt-a-Tree is an initiative by Carved Rock Fitness to adopt trees from various
 The project's style files use Sass, via [node-sass](https://github.com/sass/node-sass) to watch and compile scss files to CSS, via the following command:
 
 ```
-npx 
+node-sass --watch assets/scss/styles.scss assets/css/styles.css
 ```
 
 To watch and compile the style guide's scss file to CSS, use the following command:
@@ -15,10 +15,3 @@ To watch and compile the style guide's scss file to CSS, use the following comma
 ```
 node-sass --watch assets/scss/style-guide.scss assets/css/style-guide.css
 ```
-
-
-by me 
-npm install node-sass --save-dev
-
-
-npx node-sass --watch assets/scss/style-guide.scss assets/css/style-guide.css
