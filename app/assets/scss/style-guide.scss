@@ -14,7 +14,6 @@ $zindex-styleguide-menu: 1000;
 // STYLE GUIDE: BUTTON TO TOGGLE SIDEBAR ON MOBILE
 
 .btn-styleguide-menu {
-  background-color: $gray-mist;
   border-radius: 0;
   height: $spacing-3;
   position: fixed;
@@ -259,5 +258,12 @@ $zindex-styleguide-menu: 1000;
   > div {
     background-color: $brand-1-x-light;
     padding: $spacing;
+  }
+}
+
+// Style Guide: Demo Block: Buttons: Modifier
+.styleguide-demo-each--buttons {
+  .btn {
+    margin: 0 0 $spacing 0;
   }
 }

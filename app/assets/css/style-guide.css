@@ -1,5 +1,4 @@
 .btn-styleguide-menu {
-  background-color: #F1F1F1;
   border-radius: 0;
   height: 30px;
   position: fixed;
@@ -169,3 +168,6 @@
 .styleguide-demo-each--margin-auto > div {
   background-color: #C7E9DD;
   padding: 10px; }
+
+.styleguide-demo-each--buttons .btn {
+  margin: 0 0 10px 0; }
