@@ -3,6 +3,30 @@
 
 
 // ---------------------------------------------
+// GLOBALS: RESPONSIVE IMAGES, HTML5 VIDEOS, SVGS
+
+img, video, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+// Hack for old Android devices to calculate height correctly
+svg {
+  max-height: 100%;
+}
+
+
+// ---------------------------------------------
+// GLOBALS: FULL WIDTH
+// Use for images, HTML5 videos and any element which needs to fill up its parent's width
+
+.full-width {
+  display: block;
+  width: 100%;
+}
+
+
+// ---------------------------------------------
 // GLOBALS: ALIGNMENT: CENTER: HORIZONTAL (USES AUTO MARGINS)
 // Use for horizontally centering elements
 // Adds a block display so auto margins also work on inline and inline-block elements
