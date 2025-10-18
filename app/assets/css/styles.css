@@ -648,9 +648,16 @@ ul {
 ol {
   list-style-type: decimal; }
 
+.list-reset {
+  list-style-type: none;
+  margin-bottom: 0;
+  padding-left: 0; }
+  .list-reset li {
+    margin-bottom: 0; }
+
 a, .link {
-  text-decoration: none;
   color: #3ABB8D;
+  text-decoration: none;
   cursor: pointer; }
 
 img, video, svg {
@@ -663,6 +670,12 @@ svg {
 .full-width {
   display: block;
   width: 100%; }
+
+.padding-reset {
+  padding: 0; }
+
+.margin-reset {
+  margin: 0; }
 
 .center-element {
   margin-left: auto;
@@ -782,6 +795,19 @@ svg {
 .btn--xs {
   font-size: 71.42857%;
   padding: 5px 20px; }
+
+.btn-reset {
+  color: #666;
+  background: none;
+  border: none;
+  border-radius: 0;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  text-transform: inherit;
+  padding: 0; }
 
 input, select {
   border-radius: 0;

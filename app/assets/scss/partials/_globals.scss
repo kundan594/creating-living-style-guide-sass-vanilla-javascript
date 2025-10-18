@@ -27,6 +27,24 @@ svg {
 
 
 // ---------------------------------------------
+// GLOBALS: PADDING: RESET
+// Resets padding on all sides
+
+.padding-reset {
+  padding: 0 !important;
+}
+
+
+// ---------------------------------------------
+// GLOBALS: MARGINS: RESET
+// Resets margins on all sides
+
+.margin-reset {
+  margin: 0 !important;
+}
+
+
+// ---------------------------------------------
 // GLOBALS: ALIGNMENT: CENTER: HORIZONTAL (USES AUTO MARGINS)
 // Use for horizontally centering elements
 // Adds a block display so auto margins also work on inline and inline-block elements
