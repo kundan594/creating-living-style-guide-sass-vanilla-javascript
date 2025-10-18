@@ -574,6 +574,27 @@ table {
 .position-relative {
   position: relative; }
 
+.icon-size-lg {
+  font-size: 114.28571%; }
+
+.icon-size-xl {
+  font-size: 128.57143%; }
+
+.icon-size-xxl {
+  font-size: 171.42857%; }
+
+.icon-left {
+  margin-right: 5px; }
+
+.icon-left-lg {
+  margin-right: 10px; }
+
+.icon-right {
+  margin-left: 5px; }
+
+.icon-right-lg {
+  margin-left: 10px; }
+
 *, *:before, *:after {
   box-sizing: border-box; }
 
