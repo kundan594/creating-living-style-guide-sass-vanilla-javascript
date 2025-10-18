@@ -47,23 +47,25 @@
           <section id="styleguide-section-guidelines" class="styleguide-section">
             <h2>Guidelines</h2>
             <div class="styleguide-section-docs">
-              <p>{SECTION_DOCUMENTATION}</p>
+              <p>Adopt-a-Tree uses <a href="http://sass-lang.com" target="_blank">Sass</a> as a preprocessor for this project's CSS.</p> <p>Watch and compile the Sass files using the command line, or a GUI application like <a href="https://prepros.io" target="_blank">Prepros</a>, or a task runner like <a href="https://gulpjs.com" target="_blank">Gulp</a>, or a bundler like <a href="https://webpack.js.org" target="_blank">Webpack</a>.</p>
+              <p>This project uses node-sass via the command line using the following command:</p>
+              <div class="spacing-b">
+              <pre><code class="styleguide-code-inline">node-sass --watch assets/scss/styles.scss assets/css/styles.css</code></pre>
+              </div>
+              <p><span class="styleguide-do">Do</span> use single-line Sass comments (which are the same as single-line JavaScript comments) for comments that other developers need to see, since they won't get compiled into the CSS stylesheet.</p>
+              <p><span class="styleguide-dont">Don't</span> edit the <span class="font-bold">generated CSS</span> files.</p>
+              <p><span class="styleguide-dont">Don't</span> use inline styles. The handful of inline styles in the style guide are purely for demo.</p>
+
+              <p><span class="styleguide-do">Do </span> use <span class="font-bold">2 spaces</span> to indent your code.</p>
+              <p><span class="styleguide-do">Do</span> follow hyphen-separated class naming. E.g. <code class="styleguide-code-inline">list-block</code>.</p>
+              <p>Modifier classes use a double-hyphen naming convention. E.g.<code class="styleguide-code-inline">list-block--profile</code>.</p>
+              <p><span class="styleguide-do">Do</span> create a separate class or ID for an element which requires JavaScript to modify its behavior. Prefix it with <code class="styleguide-code-inline">js-</code> and don't attach any styling to this class or ID.</p>
+              <p><span class="styleguide-do">Do</span> browse through the <em>variables</em>, <em>globals</em>, <em>spacing</em> and <em>typography</em> partials. They contain plenty of reusable code.</p>
+              <p><span class="styleguide-do">Do</span> use camelCase for naming variables and functions in JavaScript.</p>
+              <p><span class="styleguide-do">Do</span> use semicolons after JavaScript statements.</p>
+              <p><span class="styleguide-do">Do</span> strive for an accessible user interface for users of keyboards and screen readers.</p>
+              <p><span class="styleguide-do">Do</span> ensure the project works on modern browers, including IE Edge, Chrome, Firefox, Safari, Android and iOS.</p>
             </div>
-            <div class="styleguide-section-block">
-              <div class="styleguide-section-files">Reference files: {FILE_NAMES}</div>
-              <h3>{DEMO_TITLE}</h3>
-              <!-- Add optional documentation for this demo -->
-              <!-- <div class="styleguide-section-docs">
-                <p>{SECTION_DOCUMENTATION}</p>
-              </div> -->
-              <div class="styleguide-demo-block">
-                <div class="styleguide-demo-each">
-                  {DEMO_MARKUP}
-                </div> <!-- /.styleguide-demo-each -->
-                <button class="btn-styleguide-code js-btn-styleguide-code">Code</button>
-              </div> <!-- /.styleguide-demo-block -->
-              
-            </div> <!-- /.styleguide-section-block -->
           </section>
 
           <section id="styleguide-section-logo" class="styleguide-section">
@@ -387,7 +389,7 @@
 
             </div> <!-- /.styleguide-section-block -->
           </section>
-
+          
           <section id="styleguide-section-banners" class="styleguide-section">
             <h2>Banners</h2>
             <div class="styleguide-section-docs">
@@ -504,7 +506,7 @@
           </section>
 
         </section> <!-- /.styleguide-content -->
-      </div> <!-- /.styleguide -->
+      </div> <!-- /.styleguide  -->
     </main>    
     <script src="assets/js/style-guide.js"></script>
   </body>
