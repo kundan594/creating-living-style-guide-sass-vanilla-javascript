@@ -201,3 +201,23 @@
 .card-progress-target {
   margin-left: auto;
 }
+
+
+// ---------------------------------------------
+// COMPONENTS: LOADING
+
+// Loading: Keyframe Rotate Animation
+@keyframes animation-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Loading: Loader with animation
+.loader {
+  display: inline-block;
+  animation: animation-rotate 4s infinite linear;
+}
