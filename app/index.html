@@ -25,6 +25,7 @@
             <li><a href="#styleguide-section-alignment">Alignment</a></li>
             <li><a href="#styleguide-section-media">Media Queries</a></li>
             <li><a href="#styleguide-section-grid">Grid</a></li>
+            <li><a href="#styleguide-section-accessibility">Accessibility</a></li>
             <li><a href="#styleguide-section-typography">Typography</a></li>
             <li><a href="#styleguide-section-images">Images</a></li>
             <li><a href="#styleguide-section-icons">Icons</a></li>
@@ -42,7 +43,7 @@
           </ul>
         </nav> <!-- /.styleguide-nav -->
         <section class="styleguide-content">
-          <img src="assets/svg/logos/logo.svg" width="36" height="36" alt="Logo: Adopt-a-Tree" class="styleguide-logo">
+          <img src="assets/svg/logos/logo.svg" width="36" height="36" alt="Logo: Adopt-a-Tree" class="styleguide-logo" role="img">
           <h1 class="styleguide-heading">Style Guide</h1>
 
           <section id="styleguide-section-guidelines" class="styleguide-section">
@@ -80,7 +81,7 @@
               <h3>Logo: Default: SVG</h3>
               <div class="styleguide-demo-block">
                 <div class="styleguide-demo-each">
-                  <img src="assets/svg/logos/logo.svg" alt="Logo: Adopt-a-Tree" width="36" height="36">
+                  <img src="assets/svg/logos/logo.svg" alt="Logo: Adopt-a-Tree" width="36" height="36" role="img">
                 </div> <!-- /.styleguide-demo-each -->
                 <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
               </div> <!-- /.styleguide-demo-block -->
@@ -89,7 +90,8 @@
               <div class="styleguide-demo-block">
                 <div class="styleguide-demo-each">
                   <div>
-                    <span class="at-icon-logo brand-1"></span>
+                    <span class="at-icon-logo brand-1" aria-hidden="true"></span>
+                    <span class="show-on-screen-readers">Logo: Adopt-a-Tree</span>
                   </div>
                 </div> <!-- /.styleguide-demo-each -->
                 <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
@@ -101,7 +103,7 @@
               </div>
               <div class="styleguide-demo-block">
                 <div class="styleguide-demo-each black-bg">
-                  <img src="assets/svg/logos/logo-white.svg" alt="Logo: Adopt-a-Tree" width="36" height="36">
+                  <img src="assets/svg/logos/logo-white.svg" alt="Logo: Adopt-a-Tree" width="36" height="36" role="img">
                 </div> <!-- /.styleguide-demo-each -->
                 <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
               </div> <!-- /.styleguide-demo-block -->
@@ -110,7 +112,8 @@
               <div class="styleguide-demo-block">
                 <div class="styleguide-demo-each black-bg">
                   <div>
-                    <span class="at-icon-logo white"></span>
+                    <span class="at-icon-logo white" aria-hidden="true"></span>
+                    <span class="show-on-screen-readers">Logo: Adopt-a-Tree</span>
                   </div>
                 </div> <!-- /.styleguide-demo-each -->
                 <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
@@ -119,7 +122,7 @@
               <h3>Logo: Gradient with Circle: SVG</h3>
               <div class="styleguide-demo-block">
                 <div class="styleguide-demo-each">
-                  <img src="assets/svg/logos/logo-gradient-green-circle.svg" alt="Logo: Adopt-a-Tree" width="144" height="144">
+                  <img src="assets/svg/logos/logo-gradient-green-circle.svg" alt="Logo: Adopt-a-Tree" width="144" height="144" role="img">
                 </div> <!-- /.styleguide-demo-each -->
                 <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
               </div> <!-- /.styleguide-demo-block -->
@@ -775,6 +778,72 @@
             </div> <!-- /.styleguide-section-block -->
           </section>
 
+          <section id="styleguide-section-accessibility" class="styleguide-section">
+            <h2>Accessibility</h2>
+            <div class="styleguide-section-docs">
+              <p>Use semantic HTML elements like header, nav, main, footer, section and appropriate headings.</p>
+              <p>Use a class of <code class="styleguide-code-inline">show-on-screen-readers</code> to display content only for screen readers but hide it visually.</p>
+              <p>Use the <code class="styleguide-code-inline">aria-hidden</code> attribute to hide content from screen readers but display it visually.</p>
+              <p>Use the <code class="styleguide-code-inline">aria-label</code> attribute to give information to screen readers when labels can't be used.</p>
+              <p>Add a descriptive value for the <code class="styleguide-code-inline">alt</code> attribute of images. Exceptions include descriptive images and those cases where information will be unnecessarily repeated.</p>
+              <p>For SVGs referred to in image tags, add the attribute and value <code class="styleguide-code-inline">role="img"</code> to help screen readers interpret the element as an image. Note: This may cause the HTML5 validator to give you a warning.</p>
+              <p>Ensure users are able to navigate the site via the keyboard.</p>
+              <p>Ensure that every input has an <code class="styleguide-code-inline">ID</code> that matches the <code class="styleguide-code-inline">for</code> attribute of its label. Avoid using placeholders to replace labels. If you do use placeholders, make sure a label is provided for screen readers.</p>
+            </div>
+            <div class="styleguide-section-block">
+              <div class="styleguide-section-files">Reference files: _globals.scss</div>
+
+              <h3>Screen Readers: Informative images</h3>
+              <div class="styleguide-section-docs">
+                <p>Informative images should have meaningful alt text which can be used by screen readers.</p>
+              </div>
+              <div class="styleguide-demo-block">
+                <div class="styleguide-demo-each">
+                  <img src="assets/svg/logos/logo.svg" width="44" height="44" alt="Logo: Adopt-a-Tree" role="img">
+                </div> <!-- /.styleguide-demo-each -->
+                <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+              </div> <!-- /.styleguide-demo-block -->
+
+              <h3>Screen Readers: Decorative images</h3>
+              <div class="styleguide-section-docs">
+                <p>Images with empty alt text are ignored by screen readers.</p>
+              </div>
+              <div class="styleguide-demo-block">
+                <div class="styleguide-demo-each">
+                  <img src="assets/svg/leaf-motif.svg" alt="" width="80" class="center-element" role="img">
+                </div> <!-- /.styleguide-demo-each -->
+                <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+              </div> <!-- /.styleguide-demo-block -->
+
+              <h3>Screen Readers: Informative font icons</h3>
+              <div class="styleguide-section-docs">
+                <p>This example uses the <code class="styleguide-code-inline">aria-hidden</code> attribute and <code class="styleguide-code-inline">show-on-screen-readers</code> class to make an "X" icon button accessible.</p>
+              </div>
+              <div class="styleguide-demo-block">
+                <div class="styleguide-demo-each">
+                  <button class="btn-reset">
+                    <span class="at-icon-x icon-size-xxl" aria-hidden="true"></span>
+                    <span class="show-on-screen-readers">Close Lightbox</span>
+                  </button>
+                </div> <!-- /.styleguide-demo-each -->
+                <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+              </div> <!-- /.styleguide-demo-block -->
+
+              <h3>Screen Readers: Decorative font icons</h3>
+              <div class="styleguide-section-docs">
+                <p>This example hides font icons, which are purely decorative, from screen readers using the <code class="styleguide-code-inline">aria-hidden</code> attribute.</p>
+              </div>
+              <div class="styleguide-demo-block">
+                <div class="styleguide-demo-each">
+                  <span class="at-icon-leaf" aria-hidden="true"></span>
+                  <span>The icon on the left is purely decorative.</span>
+                </div> <!-- /.styleguide-demo-each -->
+                <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+              </div> <!-- /.styleguide-demo-block -->
+
+            </div> <!-- /.styleguide-section-block -->
+          </section> <!-- /.styleguide-section -->
+
           <section id="styleguide-section-typography" class="styleguide-section">
             <h2>Typography</h2>
             <div class="styleguide-section-docs">
@@ -876,7 +945,7 @@
                 <div class="styleguide-demo-each">
                   <a href="#" class="link-action">
                     <span class="at-icon-arrow-right link-action-icon"></span>
-                    <span class="link-action-text font-size-sm">Read More</span>
+                    <span class="link-action-text font-size-sm" aria-hidden="true">Read More</span>
                   </a>
                 </div> <!-- /.styleguide-demo-each -->
                 <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
@@ -952,6 +1021,7 @@
               <p>Adopt-a-Tree's font icon set was created with the <a href="https://icomoon.io/app" target="_blank">Icomoon app</a>. It includes font icon families like <a href="https://github.com/feathericons/feather" target="_blank">Feather</a>, <a href="https://github.com/FortAwesome/Font-Awesome" target="_blank">Font Awesome</a>, <a href="https://github.com/Keyamoon/IcoMoon-Free" target="_blank">Icomoon</a> and <a href="https://github.com/stephenhutchings/typicons.font" target="_blank">Typicons</a>.</p>
               <p>Each icon has a class with a prefix of <code class="styleguide-code-inline">at-icon-</code>.</p>
               <p>To update the icon set, click the 'Import Icons' button on the <a href="https://icomoon.io/app/">Icomoon website</a> and upload the <em>selection.json</em> file from the <em>font-icon</em> folder inside the <em>assets</em> folder. Add or delete icons as needed. Download the new icon set, copy the contents of the CSS file into the <em>font-icons</em> partial and update the paths in the <code class="styleguide-code-inline">@font-face</code> rule in the file.</p>
+              <p>Font icons which are purely decorative can be hidden from screen users using the <code class="styleguide-code-inline">aria-hidden</code> attribute.</p>
               <p><a href="assets/font-icon/demo.html" class="font-bold">Click here to see the list of all icons.</a></p>
             </div>
             <div class="styleguide-section-block">
@@ -1062,6 +1132,7 @@
             <h2>Buttons</h2>
             <div class="styleguide-section-docs">
               <p>Add button classes to anchors, buttons or any appropriate HTML element.</p>
+              <p>If you must use elements like <code class="styleguide-code-inline">div</code> and <code class="styleguide-code-inline">span</code> for buttons, add an attribute of <code class="styleguide-code-inline">role="button"</code> for screen readers.</p>
               <p>Buttons can be of different colors.</p>  
               <p>Buttons can be of different sizes (default, small, extra small and full-width).</p>
               <p>Buttons can be solid or hollow.</p>
@@ -1078,8 +1149,8 @@
                 <div class="styleguide-demo-each styleguide-demo-each--buttons">
                   <button class="btn btn--brand-1" type="submit">Button</button>
                   <a href="#" class="btn btn--brand-1 btn--sm">Button: Small</a>
-                  <div class="btn btn--brand-1 btn--xs" tabindex="0">Button: Extra Small</div>
-                  <span class="btn btn--brand-1 full-width" tabindex="0">Button: Full Width</span>
+                  <div class="btn btn--brand-1 btn--xs" tabindex="0" role="button">Button: Extra Small</div>
+                  <span class="btn btn--brand-1 full-width" tabindex="0" role="button">Button: Full Width</span>
                   <input type="submit" class="btn btn--brand-1 btn--disabled" value="Button: Disabled" disabled>
                 </div> <!-- /.styleguide-demo-each -->
                 <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
@@ -1090,8 +1161,8 @@
                 <div class="styleguide-demo-each styleguide-demo-each--buttons">
                   <button class="btn btn--brand-2" type="submit">Button</button>
                   <a href="#" class="btn btn--brand-2 btn--sm">Button: Small</a>
-                  <div class="btn btn--brand-2 btn--xs" tabindex="0">Button: Extra Small</div>
-                  <span class="btn btn--brand-2 full-width" tabindex="0">Button: Full Width</span>
+                  <div class="btn btn--brand-2 btn--xs" tabindex="0" role="button">Button: Extra Small</div>
+                  <span class="btn btn--brand-2 full-width" tabindex="0" role="button">Button: Full Width</span>
                   <input type="submit" class="btn btn--brand-2 btn--disabled" value="Button: Brand 2: Disabled" disabled>  
                 </div> <!-- /.styleguide-demo-each -->
                 <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
@@ -1102,8 +1173,8 @@
                 <div class="styleguide-demo-each styleguide-demo-each--buttons">
                   <button class="btn btn--white">Button: White</button>
                   <a href="#" class="btn btn--white btn--sm">Button: White: Small</a>
-                  <div class="btn btn--white btn--xs" tabindex="0">Button: White: Extra Small</div>
-                  <span class="btn btn--white full-width" tabindex="0">Button: White: Full Width</span>
+                  <div class="btn btn--white btn--xs" tabindex="0" role="button">Button: White: Extra Small</div>
+                  <span class="btn btn--white full-width" tabindex="0" role="button">Button: White: Full Width</span>
                   <input type="submit" class="btn btn--white btn--disabled" value="Button: White: Disabled" disabled>                  
                 </div> <!-- /.styleguide-demo-each -->
                 <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
@@ -1114,8 +1185,8 @@
                 <div class="styleguide-demo-each styleguide-demo-each--buttons">
                   <button class="btn btn-hollow--brand-1" type="submit">Button</button>
                   <a href="#" class="btn btn-hollow--brand-1 btn--sm">Button: Small</a>
-                  <div class="btn btn-hollow--brand-1 btn--xs" tabindex="0">Button: Extra Small</div>
-                  <span class="btn btn-hollow--brand-1 full-width" tabindex="0">Button: Full Width</span>
+                  <div class="btn btn-hollow--brand-1 btn--xs" tabindex="0" role="button">Button: Extra Small</div>
+                  <span class="btn btn-hollow--brand-1 full-width" tabindex="0" role="button">Button: Full Width</span>
                   <input type="submit" class="btn btn-hollow--brand-1 btn--disabled" value="Button: Hollow: Disabled" disabled>
                 </div> <!-- /.styleguide-demo-each -->
                 <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
@@ -1126,8 +1197,8 @@
                 <div class="styleguide-demo-each styleguide-demo-each--buttons gray-lead-bg">
                   <button class="btn btn-hollow--white" type="submit">Button</button>
                   <a href="#" class="btn btn-hollow--white btn--sm">Button: Small</a>
-                  <div class="btn btn-hollow--white btn--xs" tabindex="0">Button: Extra Small</div>
-                  <span class="btn btn-hollow--white full-width" tabindex="0">Button: Full Width</span>
+                  <div class="btn btn-hollow--white btn--xs" tabindex="0" role="button">Button: Extra Small</div>
+                  <span class="btn btn-hollow--white full-width" tabindex="0" role="button">Button: Full Width</span>
                   <input type="submit" class="btn btn-hollow--white btn--disabled" value="Button: Hollow: White: Disabled" disabled>
                 </div> <!-- /.styleguide-demo-each -->
                 <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
@@ -1270,7 +1341,7 @@
                   <div class="field">
                     <input type="file" accept="image/*" id="js-demo-input-file" class="input-file">
                     <label for="js-demo-input-file" class="btn btn--brand-1 input-file-label">
-                      <img src="assets/img/avatar/avatar-user.jpg" alt="" class="input-file-img" id="js-demo-input-file-image" width="44" height="44">Upload Photo
+                      <img src="assets/img/avatar/avatar-user.jpg" alt="" class="input-file-img" id="js-demo-input-file-image" width="44" height="44" role="img">Upload Photo
                     </label>
                   </div>
 
@@ -1376,7 +1447,7 @@
               <div class="styleguide-demo-block">
                 <div class="styleguide-demo-each">
                   <div class="avatar text-center">
-                    <img src="assets/svg/avatar/avatar-user-empty-state.svg" alt="" width="144" height="144" class="avatar-img">
+                    <img src="assets/svg/avatar/avatar-user-empty-state.svg" alt="" width="144" height="144" class="avatar-img" role="img">
                     <div class="avatar-username">Jenn Davis</div>
                     <div class="avatar-meta-info">
                       <div class="spacing-b">4 Projects / 212 Trees</div>
@@ -1433,7 +1504,7 @@
                   <div class="banner" style="background-image: url('assets/img/art-heart.jpg')">
                     <div class="overlay"></div>
                     <div class="banner-content text-center">
-                      <img src="assets/svg/logos/logo-white.svg" width="44" height="44" alt="Logo: Adopt-a-Tree">
+                      <img src="assets/svg/logos/logo-white.svg" width="44" height="44" alt="Logo: Adopt-a-Tree" role="img">
                       <div>
                         <h1 class="banner-heading">Adopt-a-Tree</h1>
                         <div class="banner-subheading">Crowd Sourcing for Trees</div>
@@ -1461,19 +1532,19 @@
                 <div class="styleguide-demo-each">
                   <ul class="list-reset font-bold">
                     <li class="spacing-b">
-                      <span class="at-icon-leaf brand-1-light icon-left-lg icon-size-xxl vertical-align-bottom"></span>
+                      <span class="at-icon-leaf brand-1-light icon-left-lg icon-size-xxl vertical-align-bottom" aria-hidden="true"></span>
                       <span class="font-size-lg">List: Item 1</span>
                     </li>
                     <li class="spacing-b">
-                      <span class="at-icon-atom brand-2 icon-left-lg icon-size-xxl vertical-align-bottom"></span>
+                      <span class="at-icon-atom brand-2 icon-left-lg icon-size-xxl vertical-align-bottom" aria-hidden="true"></span>
                       <span class="font-size-lg">List: Item 2</span>
                     </li>
                     <li class="spacing-b">
-                      <span class="at-icon-restaurant red-crimson icon-left-lg icon-size-xxl vertical-align-bottom"></span>
+                      <span class="at-icon-restaurant red-crimson icon-left-lg icon-size-xxl vertical-align-bottom" aria-hidden="true"></span>
                       <span class="font-size-lg">List: Item 3</span>
                     </li>
                     <li class="spacing-b">
-                      <span class="at-icon-droplet blue-aqua icon-left-lg icon-size-xxl vertical-align-bottom"></span>
+                      <span class="at-icon-droplet blue-aqua icon-left-lg icon-size-xxl vertical-align-bottom" aria-hidden="true"></span>
                       <span class="font-size-lg">List: Item 4</span>
                     </li>
                   </ul>
@@ -1489,7 +1560,8 @@
                       <div class="content-block">
                         <div class="row flex">
                           <div class="col gray-coal">
-                            <div class="at-icon-dollar icon-size-xxl"></div>
+                            <div class="at-icon-dollar icon-size-xxl" aria-hidden="true"></div>
+                            <div class="show-on-screen-readers">Price in dollars:</div>
                             <div class="font-bold">10</div>
                           </div>
                           <div class="col flex-1 text-center">
@@ -1500,7 +1572,8 @@
                             <div class="gray-cement font-size-sm spacing-2-b">07/20/2019</div>
                           </div>
                           <div class="col brand-1-light">
-                            <div class="at-icon-leaf icon-size-xxl"></div>
+                            <div class="at-icon-leaf icon-size-xxl" aria-hidden="true"></div>
+                            <div class="show-on-screen-readers">Number of trees:</div>
                             <div class="font-bold">10</div>
                           </div>
                         </div>
@@ -1536,20 +1609,25 @@
                       <div class="card-banner-content">
                         <div class="row-sm flex">
                           <div class="col-sm card-location">
-                            <span class="at-icon-map icon-left"></span>
+                            <span class="at-icon-map icon-left" aria-hidden="true"></span>
+                            <span class="show-on-screen-readers">Location:</span>
                             <span class="font-size-sm font-bold">Borneo, Indonesia</span>
                           </div>
                           <div class="col-sm card-tree-cost">
-                            <span class="at-icon-dollar font-size-sm"></span>
+                            <span class="at-icon-dollar font-size-sm" aria-hidden="true"></span>
                             <span class="font-size-sm font-bold">1</span>
-                            <span class="at-icon-leaf icon-right"></span>
+                            <span class="show-on-screen-readers">Price in dollars:</span>
+                            <span class="at-icon-leaf icon-right" aria-hidden="true"></span>
                           </div>
                         </div>                        
                         <div class="card-banner-title">Afforestation near Coastal Forest</div>
                         <div class="card-banner-icons">
-                          <span class="at-icon-droplet card-banner-icon" title="Water Conservation"></span>
-                          <span class="at-icon-paw card-banner-icon" title="Wildlife Zone"></span>
-                          <span class="at-icon-atom card-banner-icon" title="Carbon Sink"></span>
+                          <span class="at-icon-droplet card-banner-icon" title="Water Conservation" aria-hidden="true"></span>
+                          <span class="show-on-screen-readers">Water Conservation</span>
+                          <span class="at-icon-paw card-banner-icon" title="Wildlife Zone" aria-hidden="true"></span>
+                          <span class="show-on-screen-readers">Wildlife Zone</span>
+                          <span class="at-icon-atom card-banner-icon" title="Carbon Sink" aria-hidden="true"></span>
+                          <span class="show-on-screen-readers">Carbon Sink</span>
                         </div>
                       </div>
                     </div>
@@ -1560,8 +1638,9 @@
                       <div class="row-sm flex card-progress-text">
                         <div class="col-sm">4%</div>
                         <div class="col-sm card-progress-target">
+                          <span class="show-on-screen-readers">Target:</span>
                           <span>75000</span>
-                          <span class="at-icon-target brand-1 icon-size-xl"></span>
+                          <span class="at-icon-target brand-1 icon-size-xl" aria-hidden="true"></span>
                         </div>
                       </div>
                       <div class="text-center spacing-2-t">
@@ -1617,19 +1696,19 @@
                   <ul class="tab-block" data-tabs>
                     <li class="tab-each">
                       <a href="#tab-projects" class="tab-each-anchor" data-tabby-default>
-                        <span class="at-icon-leaf icon-left-lg"></span>
+                        <span class="at-icon-leaf icon-left-lg" aria-hidden="true"></span>
                         <span>Projects</span>
                       </a>
                     </li>
                     <li class="tab-each">
                       <a href="#tab-payment" class="tab-each-anchor">
-                        <span class="at-icon-card icon-left-lg"></span>
+                        <span class="at-icon-card icon-left-lg" aria-hidden="true"></span>
                         <span>Payment</span>
                       </a>
                     </li>
                     <li class="tab-each">
                       <a href="#tab-profile" class="tab-each-anchor">
-                        <span class="at-icon-user icon-left-lg"></span>
+                        <span class="at-icon-user icon-left-lg" aria-hidden="true"></span>
                         <span>Profile</span>
                       </a>
                     </li>

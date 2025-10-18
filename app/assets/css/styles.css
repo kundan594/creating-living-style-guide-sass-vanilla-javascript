@@ -781,6 +781,16 @@ svg {
 .icon-right-lg {
   margin-left: 10px; }
 
+.show-on-screen-readers {
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  /* Fallback: Older Browsers */
+  clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px);
+  white-space: nowrap; }
+
 .btn {
   border-radius: 30px;
   border: 1px solid;
@@ -942,7 +952,6 @@ input[type="submit"].btn {
   appearance: none; }
 
 textarea {
-  vertical-align: top;
   min-height: 110px;
   resize: vertical; }
 
@@ -1110,7 +1119,6 @@ textarea {
   background-position: center;
   padding: 15px;
   min-height: 400px;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1368,8 +1376,6 @@ textarea {
 
 .glider-block {
   position: relative; }
-  .glider-block img {
-    border-radius: 10px; }
 
 .glider-track {
   align-items: center; }
