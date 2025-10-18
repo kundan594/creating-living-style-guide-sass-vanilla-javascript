@@ -147,6 +147,30 @@ table {
 .color-link-bg {
   background-color: #3ABB8D; }
 
+.color-error {
+  color: #D05858; }
+
+.color-error-bg {
+  background-color: #D05858; }
+
+.color-success {
+  color: #3ABB8D; }
+
+.color-success-bg {
+  background-color: #3ABB8D; }
+
+.color-info {
+  color: #41568C; }
+
+.color-info-bg {
+  background-color: #41568C; }
+
+.color-disabled {
+  color: #F1F1F1; }
+
+.color-disabled-bg {
+  background-color: #F1F1F1; }
+
 .spacing {
   padding: 10px; }
 
@@ -837,6 +861,10 @@ svg {
   padding: 5px 15px;
   line-height: 1.2; }
 
+.btn--disabled {
+  opacity: 0.3;
+  pointer-events: none; }
+
 .btn-reset {
   color: #666;
   background: none;
@@ -1019,6 +1047,23 @@ textarea {
   position: absolute;
   left: -2px;
   top: -1px; }
+
+.form-error {
+  border: 1px solid #D05858; }
+
+.form-disabled {
+  color: #999;
+  background-color: #F1F1F1;
+  border-color: #F1F1F1;
+  opacity: 0.7;
+  cursor: not-allowed; }
+  .form-disabled input, .form-disabled textarea, .form-disabled select {
+    cursor: not-allowed; }
+  .form-disabled:focus {
+    border-color: #F1F1F1; }
+
+.form-required:after {
+  content: '*'; }
 
 .content-block {
   background-color: #FFF;

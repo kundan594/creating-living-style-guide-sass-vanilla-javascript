@@ -162,6 +162,15 @@
 
 
 // ---------------------------------------------
+// BUTTONS: DISABLED: MODIFIER
+
+.btn--disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+
+// ---------------------------------------------
 // BUTTONS: RESET STYLES
 // Use for resetting styles on HTML Buttons
 
